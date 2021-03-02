@@ -1,3 +1,11 @@
+// $(document).ready(handleReady);
+
+// function handleReady() {
+//   $('#btn').on('click', renderDom)
+
+// };// end handleReady
+
+
 const employees = [
   {
     name: 'Atticus',
@@ -41,3 +49,56 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
+
+// create new employee bonus array
+let employeesBonusArr = [];
+
+// create new employee bonus objects and push them into the employeeBonus array
+function bonusCalculator(employee) {
+    let bonusPercentage = 0;
+    if( Number(employee.annualSalary) > 65000 ) {
+      bonusPercentage -= 1;
+    }
+    if( employee.employeeNumber.length > 3 ) {
+      bonusPercentage += 5;
+    }
+    if( employee.reviewRating === 2 ) {
+      bonusPercentage = 0;
+    }
+    else if( employee.reviewRating === 3 ) {
+      bonusPercentage += 4;
+    }
+    else if( employee.reviewRating === 4 ) {
+      bonusPercentage += 6;
+    }
+    else if( employee.reviewRating === 5 ) {
+      bonusPercentage += 10;
+    }
+
+    if(bonusPercentage >= 13) {
+      bonusPercentage = 13;
+    }
+
+    let totalBonus = Math.round(Number(employee.annualSalary) * bonusPercentage / 100);
+    let totalCompensation = totalBonus + Number(employee.annualSalary);
+
+    let employeeBonus = {
+      name: employee.name,
+      bonusPercentage: bonusPercentage,
+      totalCompensation: totalCompensation,
+      totalBonus: totalBonus
+    }
+  return employeeBonus;
+} // end bonusCalculator
+
+function renderDom() {
+  let el = $( '#employeeBonusList' );
+  el.empty();
+  for( let i = 0; i < employees.length; i++) {
+    let employee = bonusCalculator(employees[i]);
+    el.append(`<li> Name: ${employee.name} Bonus Percentage: ${employee.bonusPercentage} Total Compensation: ${employee.totalCompensation} Total Bonus: ${employee.totalBonus}</li>`)
+  } // end for loop
+
+}// end renderDom
+
+renderDom();
