@@ -99,7 +99,7 @@ function renderDom() {
   el.empty();
   for( let i = 0; i < employees.length; i++) {
     let employee = bonusCalculator(employees[i]);
-    el.append(`<li> Name: ${employee.name}<br>Bonus Percentage: ${employee.bonusPercentage}%<br>Total Compensation: ${employee.totalCompensation}<br>Total Bonus: ${employee.totalBonus}</li>`)
+    el.append(`<li id="list"> Name: ${employee.name}<br>Bonus Percentage: ${employee.bonusPercentage}%<br>Total Compensation: ${employee.totalCompensation}<br>Total Bonus: ${employee.totalBonus}</li>`)
   } // end for loop
 
 }// end renderDom

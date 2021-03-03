@@ -1,7 +1,19 @@
+.body{
+    background: -webkit-linear-gradient(10deg,rgb(164, 233, 108)  30%, rgba(0,0,0,0) 30%), -webkit-linear-gradient(30deg, #63e89e 60%, rgb(8, 222, 230) 60%);
+    background: -o-linear-gradient(70deg, #rgb(164, 233, 108)  30%, rgba(0,0,0,0) 30%), -o-linear-gradient(30deg, #63e89e 60%, rgb(8, 222, 230) 60%);
+    background: -moz-linear-gradient(70deg, #rgb(164, 233, 108)  30%, rgba(0,0,0,0) 30%), -moz-linear-gradient(30deg, #63e89e 60%, rgb(8, 222, 230) 60%);
+    background: linear-gradient(70deg rgb(164, 233, 108)  30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, #63e89e 60%, rgb(8, 222, 230) 60%);
+}
+
 li{
     display: block;
     width: 175px;
     height: 175px;
-    border: 1px solid #000;
+    border: 1px solid white;
     float: left;
+}
+
+#list{
+    background-color: lightgrey;
+    color: black;
 }
