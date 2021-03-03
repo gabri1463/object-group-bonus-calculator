@@ -3,13 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Bonus Calculator Object Challenge</title>
-    <script src="./jquery.js" charset="utf-8"></script>
-    <script src="client.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./jquery-3.5.1.js"></script>
+    <script src="./client.js"></script>
   </head>
-  <body class="body" >
-    <h1 id="header">Bonus Calculator Object Challenge</h1>
-    <button id="btn">Click to see Employee's Bonuses for this Year</button>
-    <ul id="employeeBonusList"></ul>
+  <body>
+    <main class="container">
+      <h1 id="title" class="jumbotron">Bonus Calculator Object Challenge</h1>
+      <button id="btn" type="button" class="btn btn-primary">Click me</button>
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Bonus Percentage</th>
+            <th scope="col">Total Compensation</th>
+            <th scope="col">Total Bonus</th>
+          </tr>
+        </thead>
+        <tbody id="employeeBonusList">
+          
+        </tbody>
+      </table>
+    </main>
   </body>
 </html>
+
