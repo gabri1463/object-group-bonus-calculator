@@ -1,9 +1,9 @@
-// $(document).ready(handleReady);
+$(document).ready(handleReady);
 
-// function handleReady() {
-//   $('#btn').on('click', renderDom)
+function handleReady() {
+  $('#btn').on('click', renderDom)
 
-// };// end handleReady
+};// end handleReady
 
 
 const employees = [
@@ -99,9 +99,8 @@ function renderDom() {
   el.empty();
   for( let i = 0; i < employees.length; i++) {
     let employee = bonusCalculator(employees[i]);
-    el.append(`<li> Name: ${employee.name} Bonus Percentage: ${employee.bonusPercentage}% Total Compensation: ${employee.totalCompensation} Total Bonus: ${employee.totalBonus}</li>`)
+    el.append(`<li> Name: ${employee.name}<br>Bonus Percentage: ${employee.bonusPercentage}%<br>Total Compensation: ${employee.totalCompensation}<br>Total Bonus: ${employee.totalBonus}</li>`)
   } // end for loop
 
 }// end renderDom
 
-renderDom();
