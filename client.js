@@ -57,7 +57,7 @@ function bonusCalculator(employee) {
   if (Number(employee.annualSalary) > 65000) {
     bonusPercentage -= 1;
   }
-  if (employee.employeeNumber.length > 3) {
+  if (employee.employeeNumber.length == 4) {
     bonusPercentage += 5;
   }
   if (employee.reviewRating === 2) {
