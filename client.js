@@ -1,5 +1,6 @@
 $(document).ready(handleReady);
 
+
 function handleReady() {
   $("#btn").on("click", renderDom);
 } // end handleReady
@@ -60,9 +61,7 @@ function bonusCalculator(employee) {
   if (employee.employeeNumber.length == 4) {
     bonusPercentage += 5;
   }
-  if (employee.reviewRating === 2) {
-    bonusPercentage = 0;
-  } else if (employee.reviewRating === 3) {
+  if (employee.reviewRating === 3) {
     bonusPercentage += 4;
   } else if (employee.reviewRating === 4) {
     bonusPercentage += 6;
@@ -76,6 +75,9 @@ function bonusCalculator(employee) {
   else if(bonusPercentage < 0) {
     bonusPercentage = 0;
   }
+
+  if (employee.reviewRating < 3) {
+    bonusPercentage = 0;
 
   let totalBonus = Math.round(
     (Number(employee.annualSalary) * bonusPercentage) / 100
