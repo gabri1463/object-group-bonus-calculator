@@ -78,7 +78,7 @@ function bonusCalculator(employee) {
 
   if (employee.reviewRating < 3) {
     bonusPercentage = 0;
-
+  }
   let totalBonus = Math.round(
     (Number(employee.annualSalary) * bonusPercentage) / 100
   );
